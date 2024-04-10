@@ -36,9 +36,9 @@
                     src="https://assets-global.website-files.com/5c6eefaaeddf9248ac13bc72/5c6ef116eddf92775813c297_store-logo%402x.png"
                     width="65" alt="" class="logo-image" /></a>
             <div class="navigation-wrap">
-                <nav role="navigation" class="navigation-items w-nav-menu"><a href="product.html"
-                        class="navigation-item w-nav-link">Products</a><a href="about.html"
-                        class="navigation-item w-nav-link">About</a><a href="contact.html"
+                <nav role="navigation" class="navigation-items w-nav-menu"><a href="product.php"
+                        class="navigation-item w-nav-link">Products</a><a href="about.php"
+                        class="navigation-item w-nav-link">About</a><a href="contact.php"
                         class="navigation-item w-nav-link">Contact</a>
 <?php
     session_start();
@@ -246,47 +246,7 @@ if (isset($_COOKIE['name'])) {
                 </p>
             </div>
         </div> -->
-        <div class="container">
-            <div class="products-heading">
-                <h3>Featured Products</h3>
-                <div class="paragraph-bigger cc-bigger-light">Check out new and popular products</div>
-            </div>
-        </div>
-        <div class="w-dyn-list">
-            <div role="list" class="collection-wrap w-dyn-items">
-                <div role="listitem" class="collection-item w-dyn-item"><a
-                        data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr.url%22%2C%22to%22%3A%22style.background-image%22%7D%5D"
-                        style="background-image:url(/imag/lapy/lp3.jpg)"
-                        href="/laptop.html" class="product-image-wrap w-inline-block">
-                        <div class="product-description">
-                            <div class="product-name-text">laptop</div>
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                                class="product-price-text"></div>
-                        </div>
-                    </a></div>
-                <div role="listitem" class="collection-item w-dyn-item"><a
-                        data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr.url%22%2C%22to%22%3A%22style.background-image%22%7D%5D"
-                        style="background-image:url(/imag/HONE/frige.webp)"
-                        href="/frig.html" class="product-image-wrap w-inline-block">
-                        <div class="product-description">
-                            <div class="product-name-text">Refrigrater</div>
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                                class="product-price-text"></div>
-                        </div>
-                    </a></div>
-                <div role="listitem" class="collection-item w-dyn-item"><a
-                        data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr.url%22%2C%22to%22%3A%22style.background-image%22%7D%5D"
-                        style="background-image:url(/imag/AC/ac1.jpg)"
-                        href="/ac.html" class="product-image-wrap w-inline-block">
-                        <div class="product-description">
-                            <div class="product-name-text">Air Condisner</div>
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                                class="product-price-text"></div>
-                        </div>
-                    </a></div>
-            </div>
-        </div>
-    </div>
+        
     <div class="section cc-subscribe-form">
         <div class="container cc-subscription-form">
             <div class="heading-jumbo-small">Monthly Newsletter</div>

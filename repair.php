@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. https://www.webflow.com --><!-- Last Published: Mon Apr 01 2024 04:29:59 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="electronic-era-d58163.webflow.io" data-wf-page="660a380edcbe8e8216677e6b"
+<html data-wf-domain="electronic-era-d58163.webflow.io" data-wf-page="660a380edcbe8e8216677e51"
     data-wf-site="660a380edcbe8e8216677e08" lang="en">
-
 <head>
     <meta charset="utf-8" />
-    <title>Products</title>
-    <meta content="Products" property="og:title" />
-    <meta content="Products" property="twitter:title" />
+    <title>Welcome to Electronic era</title>
+    <meta content="Store - Webflow HTML website template" property="og:title" />
+    <meta
+        content="https://assets-global.website-files.com/5c6eefaaeddf9248ac13bc72/5cdc90c195678d12d5f23f33_Store%20SEO.jpg"
+        property="og:image" />
+    <meta content="Store - Webflow HTML website template" property="twitter:title" />
+    <meta
+        content="https://assets-global.website-files.com/5c6eefaaeddf9248ac13bc72/5cdc90c195678d12d5f23f33_Store%20SEO.jpg"
+        property="twitter:image" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
-    <link
-        href="style.css"
-        rel="stylesheet" type="text/css" />
+    <link href="home.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -29,138 +32,25 @@
 <body>
     <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
         role="banner" class="navigation w-nav">
-        <div class="navigation-items"><a href="/" class="logo-link w-nav-brand"><img
+        <div class="navigation-items"><a href="/" aria-current="page" class="logo-link w-nav-brand w--current"><img
                     src="https://assets-global.website-files.com/5c6eefaaeddf9248ac13bc72/5c6ef116eddf92775813c297_store-logo%402x.png"
                     width="65" alt="" class="logo-image" /></a>
             <div class="navigation-wrap">
-                <nav role="navigation" class="navigation-items w-nav-menu"><a href="/products.html" aria-current="page"
-                        class="navigation-item w-nav-link w--current">Products</a><a href="/about"
-                        class="navigation-item w-nav-link">About</a><a href="/contact"
-                        class="navigation-item w-nav-link">Contact</a></nav>
-                <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="rightSidebar"
-                    data-wf-cart-query="query Dynamo2 {
-  database {
-    id
-    commerceOrder {
-      comment
-      extraItems {
-        name
-        pluginId
-        pluginName
-        price {
-          value
-          unit
-          decimalValue
-          string
-        }
-      }
-      id
-      startedOn
-      statusFlags {
-        hasDownloads
-        hasSubscription
-        isFreeOrder
-        requiresShipping
-      }
-      subtotal {
-        value
-        unit
-        decimalValue
-        string
-      }
-      total {
-        value
-        unit
-        decimalValue
-        string
-      }
-      updatedOn
-      userItems {
-        count
-        id
-        product {
-          id
-          cmsLocaleId
-          f__draft_0ht
-          f__archived_0ht
-          f_name_
-          f_sku_properties_3dr {
-            id
-            name
-            enum {
-              id
-              name
-              slug
-            }
-          }
-        }
-        rowTotal {
-          value
-          unit
-          decimalValue
-          string
-        }
-        sku {
-          cmsLocaleId
-          f__draft_0ht
-          f__archived_0ht
-          f_main_image_4dr {
-            url
-            file {
-              size
-              origFileName
-              createdOn
-              updatedOn
-              mimeType
-              width
-              height
-              variants {
-                origFileName
-                quality
-                height
-                width
-                s3Url
-                error
-                size
-              }
-            }
-            alt
-          }
-          f_price_ {
-            value
-            unit
-            decimalValue
-            string
-          }
-          f_sku_values_3dr {
-            property {
-              id
-            }
-            value {
-              id
-            }
-          }
-          id
-        }
-        subscriptionFrequency
-        subscriptionInterval
-        subscriptionTrial
-      }
-      userItemsCount
-    }
-  }
-  site {
-    id
-    commerce {
-      businessAddress {
-        country
-      }
-      defaultCountry
-      defaultCurrency
-      quickCheckoutEnabled
-    }
-  }
-}" data-wf-page-link-href-prefix="" class="w-commerce-commercecartwrapper cart"><a href="#"
+                <nav role="navigation" class="navigation-items w-nav-menu"><a href="product.php"
+                        class="navigation-item w-nav-link">Products</a><a href="about.php"
+                        class="navigation-item w-nav-link">About</a><a href="contact.php"
+                        class="navigation-item w-nav-link">Contact</a>
+<?php
+error_reporting(0);
+    session_start();
+if (isset($_COOKIE['name'])) {
+    echo '<p class="navigation-item w-nav-link">Welcome,<br>';
+    echo $_COOKIE['name']."</p>";
+}else {
+    echo '<a href="login.php" class="navigation-item w-nav-link">Login</a>';
+}
+?>
+                    </nav><a href="#"
                         data-node-type="commerce-cart-open-link"
                         class="w-commerce-commercecartopenlink button cc-cart w-inline-block" role="button"
                         aria-haspopup="dialog" aria-label="Open cart">
@@ -326,129 +216,51 @@
             </div>
         </div>
     </div>
-    <div class="section">
-        <div class="container cc-heading-wrap">
-            <h1>Our Products</h1>
-            <div class="store-categories-wrap"><a href="/products" aria-current="page"
-                    class="products-category-link w--current">All Products</a>
-                <div class="w-dyn-list">
-                    <div role="list" class="collection-list w-dyn-items">
-                        <div role="listitem" class="w-dyn-item"><a href="/category/category-1"
-                                class="products-category-link">Category 1</a></div>
-                        <div role="listitem" class="w-dyn-item"><a href="/category/category-2"
-                                class="products-category-link">Category 2</a></div>
-                        <div role="listitem" class="w-dyn-item"><a href="/category/category-3"
-                                class="products-category-link">Category 3</a></div>
-                        <div role="listitem" class="w-dyn-item"><a href="/category/category-4"
-                                class="products-category-link">Category 4</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="w-dyn-list">
-            <div role="list" class="collection-wrap w-dyn-items">
-    <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "elec-era";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    $sql = "SELECT name, image FROM categories";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-    echo '                <div role="listitem" class="collection-item w-dyn-item">
-                <a href="repair.php?product='.$row['name'].'"><img src="'.$row['image'].'">
-                        <div class="product-description">
-                            <div class="product-name-text">'.$row['name'].'</div>
-                        </div>
-                    </a>
-                </div>';
-        }
-    }
-    ?>
-    </div>
-        </div>
-    </div>
     <div class="section cc-subscribe-form">
         <div class="container cc-subscription-form">
-            <div class="heading-jumbo-small">Monthly Newsletter</div>
-            <div class="paragraph-light cc-subscribe-paragraph">Sign up to receive updates from our shop, including new
-                tea selections and upcoming events.</div>
+            <div class="heading-jumbo-small">Repair Form For <?php echo $_GET['product'];?></div>
+            <div class="paragraph-light cc-subscribe-paragraph">Enter Your <?php echo $_GET['product']?> Details</div>
             <div class="form-block w-form">
-                <form id="wf-form-Monthly-Newsletter-Form" name="wf-form-Monthly-Newsletter-Form"
-                    data-name="Monthly Newsletter Form" method="get" class="subscribe-form"
-                    data-wf-page-id="660a380edcbe8e8216677e6b"
-                    data-wf-element-id="2df3695a-ff87-37fa-7ac7-63d4f4891940"><input
-                        class="text-field cc-subscribe-text-field w-input" maxlength="256" name="Newsletter-Email"
-                        data-name="Newsletter Email" placeholder="Enter your email" type="email" id="Newsletter-Email"
-                        required="" /><input type="submit" data-wait="Please wait..." class="button w-button"
-                        value="Submit" /></form>
-                <div class="status-message w-form-done">
-                    <div>Thank you! Your submission has been received!</div>
-                </div>
-                <div class="status-message w-form-fail">
-                    <div>Oops! Something went wrong while submitting the form.</div>
+                <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                    <input class="text-field cc-subscribe-text-field w-input" maxlength="256" name="pro-name" placeholder="Enter <?php echo $_GET['product'];?> Model" type="text" required="" /><br>
+                    <input class="text-field cc-subscribe-text-field w-input" maxlength="256" name="address" placeholder="Enter Address" type="text" required="" /><br>
+                    <div role="group">
+                        <select
+                                id="option-set-f9a7001ff087b782c3ad5088da606865"
+                                data-node-type="commerce-add-to-cart-option-select"
+                                data-commerce-option-set-id="f9a7001ff087b782c3ad5088da606865" class="w-select"
+                                required="" name="option">
+                                <option value="" selected="">Select problems</option>
+                                <option value="internal">Internal</option>
+                                <option value="external">Extenal</option>
+                                <option value="other">Others</option>
+                            </select></div>
+                    <input type="submit" data-wait="Please wait..." class="button w-button" value="Submit" />
+                    </form>
+                    <?php
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "elec-era";
+                        $conn = new mysqli($servername, $username, $password, $dbname);
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
+                    if(isset($_COOKIE['userid'])) {
+                        $userid = $_COOKIE['userid'];
+                        echo $userid;
+                        $query = 'INSERT INTO repair_req (product, damage, address, userid) VALUES ("'.$_POST['pro-name'].'", "'.$_POST['damage'].'", "'.$_POST['address'].'", "'.$_COOKIE['userid'].'");';
+                        $result = mysqli_query($conn, $query);
+                        header("Location: home.php");
+                        exit();
+                    } else {
+                        header("Location: login.php");
+                        exit();
+                    }
+                    ?>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section">
-        <div class="container">
-            <div class="w-layout-grid footer"><a href="/" id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e2971b-87e29718"
-                    class="logo-link w-inline-block"><img
-                        src="https://assets-global.website-files.com/660a380edcbe8e8216677e08/660a380edcbe8e8216677e74_store-logo%402x.png"
-                        width="65" alt="" class="logo-footer" /></a>
-                <div id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e2971d-87e29718" class="label">Menu</div>
-                <div id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e2971f-87e29718" class="links-section-footer"><a href="/"
-                        class="footer-link">Home</a><a href="/about" class="footer-link">About</a><a href="/contact"
-                        class="footer-link">Contact</a><a href="/products" aria-current="page"
-                        class="footer-link w--current">Products</a><a href="/blog" class="footer-link">Blog</a><a
-                        href="/styleguide" class="footer-link">Styleguide</a></div>
-                <div id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e29724-87e29718" class="label">Categories</div>
-                <div id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e29726-87e29718" class="links-section-footer">
-                    <div class="w-dyn-list">
-                        <div role="list" class="w-dyn-items">
-                            <div role="listitem" class="w-dyn-item"><a href="/category/category-1"
-                                    class="footer-link">Category 1</a></div>
-                            <div role="listitem" class="w-dyn-item"><a href="/category/category-2"
-                                    class="footer-link">Category 2</a></div>
-                            <div role="listitem" class="w-dyn-item"><a href="/category/category-3"
-                                    class="footer-link">Category 3</a></div>
-                            <div role="listitem" class="w-dyn-item"><a href="/category/category-4"
-                                    class="footer-link">Category 4</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e2972d-87e29718" class="label">Help</div>
-                <div id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e2972f-87e29718" class="links-section-footer"><a
-                        href="/contact" class="footer-link">Shipping</a><a href="/contact" class="footer-link">Returns
-                        &amp; Exchange</a><a href="/contact" class="footer-link">Product Care</a></div>
-                <div id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e29736-87e29718" class="label">Follow</div>
-                <div id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e29738-87e29718" class="links-section-footer"><a
-                        href="https://www.instagram.com/webflowapp/" target="_blank" class="footer-link">Instagram</a><a
-                        href="https://www.facebook.com/webflow/" target="_blank" class="footer-link">Facebook</a><a
-                        href="https://twitter.com/webflow" target="_blank" class="footer-link">Twitter</a></div><a
-                    id="w-node-_88a386dd-8f07-0c34-70f0-2d9f87e2973f-87e29718" href="https://webflow.com/"
-                    target="_blank" class="made-with-webflow w-inline-block"><img
-                        src="https://assets-global.website-files.com/660a380edcbe8e8216677e08/660a380edcbe8e8216677e7a_webflow-w-small%402x.png"
-                        width="15" alt="" class="webflow-logo-tiny" />
-                    <div class="paragraph-tiny">Powered by Webflow</div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=660a380edcbe8e8216677e08"
-        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-        crossorigin="anonymous"></script>
-    <script src="/era.js"
-        type="text/javascript"></script>
 </body>
-
 </html>
